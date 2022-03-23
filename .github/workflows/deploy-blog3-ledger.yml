@@ -26,6 +26,6 @@ jobs:
         DEMO_CONNECTOR_1_SEED: ${{ secrets.DEMO_CONNECTOR_1_SEED }}
         DEMO_CONNECTOR_2_SEED: ${{ secrets.DEMO_CONNECTOR_2_SEED }}
       run: |
-        ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i ledger.key ubuntu@${{ DEMO_LEDGER_IP }} git -C /home/ubuntu/von-network fetch origin
-        ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i ledger.key ubuntu@${{ DEMO_LEDGER_IP }} git -C /home/ubuntu/von-network checkout "${GITHUB_SHA}"
-        ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i ledger.key ubuntu@${{ DEMO_LEDGER_IP }} /home/ubuntu/von-network/.github/scripts/deploy-blog3-ledger.sh
+        ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i ledger.key ubuntu@${{ secrets.DEMO_LEDGER_IP }} git -C /home/ubuntu/von-network fetch origin
+        ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i ledger.key ubuntu@${{ secrets.DEMO_LEDGER_IP }} git -C /home/ubuntu/von-network checkout "${GITHUB_SHA}"
+        ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i ledger.key ubuntu@${{ secrets.DEMO_LEDGER_IP }} /home/ubuntu/von-network/.github/scripts/deploy-blog3-ledger.sh
