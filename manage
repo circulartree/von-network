@@ -1,7 +1,7 @@
 #!/bin/bash
 export MSYS_NO_PATHCONV=1
 # getDockerHost; for details refer to https://github.com/bcgov/DITP-DevOps/tree/main/code/snippets#getdockerhost
-. /dev/stdin <<<"$(cat <(curl -s --raw https://raw.githubusercontent.com/bcgov/DITP-DevOps/main/code/snippets/getDockerHost))" 
+. /dev/stdin <<<"$(cat <(curl -s --raw https://raw.githubusercontent.com/bcgov/DITP-DevOps/main/code/snippets/getDockerHost))"
 export DOCKERHOST=$(getDockerHost)
 
 SCRIPT_HOME="$( cd "$( dirname "$0" )" && pwd )"
@@ -90,13 +90,13 @@ usage () {
 
   generateGenesisFiles - Generates pool and domain genesis files from data input via csv files.
         $0 generategenesisfiles <trustees_csv_file> <stewards_csv_file>
-        
+
         This is a convenience command wrapped around the Steward Tools script for generating genesis files found here;
         https://github.com/sovrin-foundation/steward-tools/tree/master/create_genesis
 
         The script is downloaded and hosted in a running container which has the required packages installed.
 
-        Examples of the csv files can be downloaded from here; 
+        Examples of the csv files can be downloaded from here;
         https://docs.google.com/spreadsheets/d/1LDduIeZp7pansd9deXeVSqGgdf0VdAHNMc7xYli3QAY/edit#gid=0
         Download each sheet separately in csv format and fill them out with the data specific to your network.
 
