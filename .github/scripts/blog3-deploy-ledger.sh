@@ -2,5 +2,5 @@ cd /home/ubuntu/von-network
 
 ./manage rm
 
-./manage build
+./manage rebuild
 ./manage up --wait
