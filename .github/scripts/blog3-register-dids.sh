@@ -1,7 +1,7 @@
 #!/bin/bash
 
 USAGE="Usage: $(basename "$0") seedsfile
-Deploy demo ledger
+Register DIDs
 
 where:
   seedsfile  Absolute path to file with seeds, one per line
